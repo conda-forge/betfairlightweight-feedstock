@@ -1,7 +1,7 @@
 About betfairlightweight
 ========================
 
-Home: https://github.com/liampauling/betfairlightweight
+Home: https://github.com/liampauling/betfair
 
 Package license: MIT
 
