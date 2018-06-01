@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "1.6.2" %}
-{% set sha256 = "616f5662e8b04c6dcab6ec524182516a8ef54079a5f6e268d8c568906a40c867" %}
+{% set version = "1.6.3" %}
+{% set sha256 = "7a03f2dbfed77de721461157ade2a9f9a879020be4bb1f38014b477fabd4926f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,18 +13,18 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - requests
     - enum34  # [py<34]
-    - ujson
-    - ciso8601
+    - ujson >=1.35
+    - ciso8601 >=2.0.0
 
 test:
   requires:
@@ -40,7 +40,7 @@ test:
     - python -m unittest discover -s tests --verbose
 
 about:
-  home: https://github.com/liampauling/betfairlightweight
+  home: https://github.com/liampauling/betfair
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -49,8 +49,7 @@ about:
   description: |
     Lightweight, super fast pythonic wrapper for Betfair API-NG allowing all 
     betting operations (including market and order streaming) and most account operations.
-  dev_url: https://github.com/liampauling/betfairlightweight
-
+  dev_url: https://github.com/liampauling/betfair
 extra:
   recipe-maintainers:
     - synapticarbors
