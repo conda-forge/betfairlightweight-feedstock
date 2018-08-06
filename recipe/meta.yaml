@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "1.7.0" %}
-{% set sha256 = "99fc2776d5bd644b987027c474b679fad01e33f3e4f8de5b706cb71640d97c9a" %}
+{% set version = "1.7.1" %}
+{% set sha256 = "82c1fe1ff1a0406c66000d31b6be63462a0fdf32f04077f7ef8a654e09bdb807" %}
 
 package:
   name: {{ name|lower }}
