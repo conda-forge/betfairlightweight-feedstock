@@ -14,13 +14,14 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
+  skip: True  # [not py3k]
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
   run:
-    - python >=3.5
+    - python
     - requests
     - ujson >=1.35
     - ciso8601 >=2.1.3
