@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "1.10.4" %}
-{% set sha256 = "62db8ea8dafd9fa862a03e5621786c5e8e4395bc918f8d38d50c0d100f12c95f" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "d480456854cfef0ab0f0c264ca1192fe1a800e1ef77e06550c72046c53d41633" %}
 
 package:
   name: {{ name|lower }}
@@ -13,18 +13,18 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - requests
-    - enum34  # [py<34]
     - ujson >=1.35
-    - ciso8601 >=2.0.0
+    - ciso8601 >=2.1.3
 
 test:
   requires:
