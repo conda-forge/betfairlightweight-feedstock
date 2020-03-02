@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "01d4a60dcf9aee9886bfe0cab820e14631ecfe01e77834134882f110e5d4129b" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "9881b8ffe3eabfd6878833dc583720f8bd70a6eae0ffb2fce01fc6e7f548b80a" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -44,7 +44,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Lightweight python wrapper for Betfair API-NG'
+  summary: Lightweight python wrapper for Betfair API-NG
 
   description: |
     Lightweight, super fast pythonic wrapper for Betfair API-NG allowing all 
