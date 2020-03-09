@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "9881b8ffe3eabfd6878833dc583720f8bd70a6eae0ffb2fce01fc6e7f548b80a" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "8b5e812bf25673943829b5ce65baedd3c19de8e7b12f99787bac781c39b6abfd" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.5
     - requests
-    - ujson >=1.35
+    - ujson ~=2.0.1
     - ciso8601 >=2.1.3
 
 test:
