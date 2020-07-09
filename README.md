@@ -5,7 +5,7 @@ Home: https://github.com/liampauling/betfair
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Lightweight python wrapper for Betfair API-NG
 
