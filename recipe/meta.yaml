@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.7.2" %}
-{% set sha256 = "1e612c4115f0dbad132695f88c26016e4236e724e54739a4ecd77e43c5fc3e7d" %}
+{% set version = "2.8.0" %}
+{% set sha256 = "031a43d9b16d3ebaaee0853b4393bcac7e8c6a7a18006e33e6e432383e6f6925" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
