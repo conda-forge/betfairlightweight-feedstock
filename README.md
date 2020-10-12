@@ -5,9 +5,11 @@ Home: https://github.com/liampauling/betfair
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/betfairlightweight-feedstock/blob/master/LICENSE.txt)
 
 Summary: Lightweight python wrapper for Betfair API-NG
+
+Development: https://github.com/liampauling/betfair
 
 Lightweight, super fast pythonic wrapper for Betfair API-NG allowing all
 betting operations (including market and order streaming) and most account operations.
