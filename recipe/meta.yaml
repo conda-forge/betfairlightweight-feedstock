@@ -35,6 +35,7 @@ test:
     - betfairlightweight.streaming
   source_files:
     - tests/*
+    - HISTORY.rst
   commands:
     - python -m unittest discover -s tests --verbose
 
