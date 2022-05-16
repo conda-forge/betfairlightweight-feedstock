@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.16.4" %}
-{% set sha256 = "4fe73e62eb2cf6bcf20e49aa1adbe57e9383cf00db3570d11c55d4fe245c3aef" %}
+{% set version = "2.16.5" %}
+{% set sha256 = "a08023d6cf14bcc113673dd93f631f7db9eddb6409d4fd09ab122476fd14d884" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.6
     - requests
-    - orjson >=3.6.0
+    - orjson >=3.6.8
     - ciso8601 >=2.2.0
 
 test:
