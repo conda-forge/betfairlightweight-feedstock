@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.16.5" %}
-{% set sha256 = "a08023d6cf14bcc113673dd93f631f7db9eddb6409d4fd09ab122476fd14d884" %}
+{% set version = "2.16.6" %}
+{% set sha256 = "4e20c5abdce4beeee608a6c7acd6cdf5bf09ecc7bf3b4ea9144281f9e374e0a8" %}
 
 package:
   name: {{ name|lower }}
@@ -21,13 +21,14 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - requests
-    - orjson >=3.6.8
+    - requests <2.29.0
+    - orjson >=3.7.7
     - ciso8601 >=2.2.0
 
 test:
   requires:
     - mock
+    - pip
   imports:
     - betfairlightweight
     - betfairlightweight.endpoints
@@ -38,6 +39,7 @@ test:
     - HISTORY.rst
   commands:
     - python -m unittest discover -s tests --verbose
+    - pip check
 
 about:
   home: https://github.com/betcode-org/betfair
