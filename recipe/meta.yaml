@@ -21,13 +21,14 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - requests
-    - orjson >=3.6.8
+    - requests <2.29.0
+    - orjson >=3.7.7
     - ciso8601 >=2.2.0
 
 test:
   requires:
     - mock
+    - pip
   imports:
     - betfairlightweight
     - betfairlightweight.endpoints
@@ -38,6 +39,7 @@ test:
     - HISTORY.rst
   commands:
     - python -m unittest discover -s tests --verbose
+    - pip check
 
 about:
   home: https://github.com/betcode-org/betfair
