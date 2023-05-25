@@ -1,11 +1,11 @@
-About betfairlightweight
-========================
+About betfairlightweight-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/betfairlightweight-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/betcode-org/betfair
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/betfairlightweight-feedstock/blob/main/LICENSE.txt)
 
 Summary: Lightweight python wrapper for Betfair API-NG
 
