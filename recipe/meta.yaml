@@ -1,6 +1,6 @@
 {% set name = "betfairlightweight" %}
-{% set version = "2.19.0" %}
-{% set sha256 = "01464e3486f2c20cf32e0c5263b028fdea1df4fa455f43d4d1fbcf1a64d350d9" %}
+{% set version = "2.19.1" %}
+{% set sha256 = "932ae17d7e238816034388260bff18318d97e67b4b2609f7e905e4369afbe1a8" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<3.12
     - requests <2.32.0
     - orjson >=3.9.4
     - ciso8601 >=2.3.0
