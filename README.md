@@ -14,7 +14,6 @@ Development: https://github.com/betcode-org/betfair
 Lightweight, super fast pythonic wrapper for Betfair API-NG allowing all
 betting operations (including market and order streaming) and most account operations.
 
-
 Current build status
 ====================
 
