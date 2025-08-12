@@ -1,0 +1,64 @@
+schema_version: 1
+
+context:
+  name: betfairlightweight
+  version: 2.21.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256:  32e3178d90a5af26e6f75646d84349f3cd314dd9a2de599caac213f0d4ed3d8c
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling
+  run:
+    - python >=${{ python_min }}
+    - requests <2.33.0
+    - orjson >=3.11.1
+    - ciso8601 >=2.3.2
+
+tests:
+  - python:
+      imports:
+        - betfairlightweight
+        - betfairlightweight.endpoints
+        - betfairlightweight.resources
+        - betfairlightweight.streaming
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - files:
+      source:
+        - tests/*
+        - HISTORY.rst
+    requirements:
+      run:
+        - mock
+        - python ${{ python_min }}.*
+    script:
+      - python -m unittest discover -s tests --verbose
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Lightweight python wrapper for Betfair API-NG
+  description: |
+    Lightweight, super fast pythonic wrapper for Betfair API-NG allowing all
+    betting operations (including market and order streaming) and most account operations.
+  homepage: https://github.com/betcode-org/betfair
+  repository: https://github.com/betcode-org/betfair
+
+extra:
+  recipe-maintainers:
+    - synapticarbors
+    - liampauling
