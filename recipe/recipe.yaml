@@ -25,8 +25,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - requests <2.33.0
-    - orjson >=3.11.1
-    - ciso8601 >=2.3.2
+    - orjson >=3.11.4
+    - ciso8601 >=2.3.3
 
 tests:
   - python:
