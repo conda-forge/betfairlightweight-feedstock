@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: betfairlightweight
-  version: "2.22.0"
+  version: "2.22.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0b360626d7309182a39cb4d8d2c925c0a4a0419256710d85d27dd9ddc3ad298c
+  sha256: 93ceee4bdde90f7663104d6163f2dfc8357f78bb57b631e0c3440d2904542f0a
 
 build:
   number: 0
