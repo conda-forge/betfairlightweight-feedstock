@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  name: betfairlightweight
-  version: "2.23.2"
+  version: "2.24.0"
 
 package:
-  name: ${{ name|lower }}
+  name: betfairlightweight
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 44439f5bb67a9f6344ef70d7a14af2e4886b39a113e6295fbf734c6384eb1c3c
+  url: https://pypi.org/packages/source/b/betfairlightweight/betfairlightweight-${{ version }}.tar.gz
+  sha256: ce4238d25628db34380cc45598c0b5091efe4e29084875803d9489d4879d00df
 
 build:
   number: 0
@@ -24,8 +23,8 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - requests <2.33.0
-    - orjson >=3.11.4
+    - requests <2.35.0
+    - orjson >=3.12.0
     - ciso8601 >=2.3.3
 
 tests:
@@ -36,7 +35,9 @@ tests:
         - betfairlightweight.resources
         - betfairlightweight.streaming
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - tests/*
